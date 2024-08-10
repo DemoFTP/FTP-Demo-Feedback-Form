@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <section class="hero is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Demo Form Feedback - Chemistry JEE</h1>
+            </div>
+        </div>
+    </section>
+    <form id="form" class="container m-4 pl-4" method="POST"action="https://script.google.com/macros/s/AKfycbyRDhvgH79ia2l__zhHJqnFkoUTkYXpN3e0ramzvjAWOVgC3uwBfR4IroY38PEbzcdy/exec">
+        <!-- Subject Dropdown -->
+        <div class="field">
+            <label class="label">Select Subject</label>
+            <div class="control">
+                <select id="subject-select" class="select" name="Subject" required style="width: 100%;">
+                    <option value="">Select a Subject</option>
+                    <option value="Math">Math</option>
+                    <option value="Chemistry JEE">Chemistry JEE</option>
+                    <option value="Chemistry NEET">Chemistry NEET</option>
+                    <option value="Physics JEE">Physics JEE</option>
+                    <option value="Physics NEET">Physics NEET</option>
+                    <option value="Zoology">Zoology</option>
+                    <option value="Botany">Botany</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Trainee Dropdown -->
+        <div class="field">
+            <label class="label">Name of the Trainee</label>
+            <div class="control">
+                <select id="trainee-select" class="select" name="Trainee" required style="width: 100%;">
+                    <option value="">Select a Trainee</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Topic Name -->
+        <div class="field">
+            <label class="label">Topic Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Fill the topic Name" name="Topic" required />
+            </div>
+        </div>
+
+        <!-- Expectations Setting Dropdown with Number Range -->
+        <div class="field">
+            <label class="label">Expectations Setting</label>
+            <div class="control">
+                <select id="expectations-select" class="select category-select" name="Expectations" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select id="number-select" class="select number-range" name="ExpectationsNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Category Dropdowns with Number Ranges -->
+        <!-- Classroom greetings and closure -->
+        <div class="field">
+            <label class="label">Classroom greetings and closure</label>
+            <div class="control">
+                <select class="select category-select" name="ClassroomGreetings" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select class="select number-range" name="ClassroomGreetingsNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Energy level, body language, voice modulation -->
+        <div class="field">
+            <label class="label">Energy level, body language, voice modulation</label>
+            <div class="control">
+                <select class="select category-select" name="EnergyLevel" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select class="select number-range" name="EnergyLevelNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Student engagement -->
+        <div class="field">
+            <label class="label">Student engagement</label>
+            <div class="control">
+                <select class="select category-select" name="StudentEngagement" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select class="select number-range" name="StudentEngagementNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Real life example and prop used -->
+        <div class="field">
+            <label class="label">Real life example and prop used</label>
+            <div class="control">
+                <select class="select category-select" name="RealLifeExample" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select class="select number-range" name="RealLifeExampleNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Space utilization & eye-contact -->
+        <div class="field">
+            <label class="label">Space utilization & eye-contact</label>
+            <div class="control">
+                <select class="select category-select" name="SpaceUtilization" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select class="select number-range" name="SpaceUtilizationNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Board work -->
+        <div class="field">
+            <label class="label">Board work</label>
+            <div class="control">
+                <select class="select category-select" name="BoardWork" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select class="select number-range" name="BoardWorkNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Teaching instructions & flow of content -->
+        <div class="field">
+            <label class="label">Teaching instructions & flow of content</label>
+            <div class="control">
+                <select class="select category-select" name="TeachingInstructions" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select class="select number-range" name="TeachingInstructionsNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="field">
+            <label class="label">Conclusion</label>
+            <div class="control">
+                <select class="select category-select" name="Conclusion" required style="width: 100%;">
+                    <option value="">Select an Option</option>
+                    <option value="1">Not at all acceptable (1)</option>
+                    <option value="2">Requires huge improvement (2)</option>
+                    <option value="3">Average (3)</option>
+                    <option value="4">Far above average (4)</option>
+                    <option value="5">Perfect and magical beyond expectations (5)</option>
+                </select>
+                <select class="select number-range" name="ConclusionNumber" required style="width: 100%;">
+                    <option value="">Select a Number</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Submit and Clear Buttons -->
+        <div class="field">
+            <div class="control">
+                <button type="submit" class="button is-primary">Submit</button>
+                <button type="button" id="clear-button" class="button is-light">Clear</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize Select2
+            $('.select').select2();
+
+            // Define number ranges for each rating
+            const numberRanges = {
+                1: [1, 20],
+                2: [21, 40],
+                3: [41, 60],
+                4: [61, 80],
+                5: [81, 100]
+            };
+
+            // Function to update number range dropdown based on selected rating
+            function updateNumberRange(rating, selectId) {
+                const range = numberRanges[rating] || [];
+                let options = '<option value="">Select a Number</option>';
+                for (let i = range[0]; i <= range[1]; i++) {
+                    options += `<option value="${i}">${i}</option>`;
+                }
+                $(selectId).html(options).trigger('change');
+            }
+
+            // Event handler for Expectations Setting dropdown
+            $('#expectations-select').change(function() {
+                const rating = $(this).val();
+                updateNumberRange(rating, '#number-select');
+            });
+
+            // Event handler for category-select dropdowns
+            $('.category-select').change(function() {
+                const rating = $(this).val();
+                const numberRangeSelect = $(this).closest('.field').find('.number-range');
+                updateNumberRange(rating, numberRangeSelect);
+            });
+
+            // Populate trainee dropdown based on selected subject
+            $('#subject-select').change(function() {
+                const subject = $(this).val();
+                const trainees = {
+            'Math': [
+		'Aakash chauhan  (MJ0001)',
+		'Abhay raj (MJ0002)',
+		'Amit yadav  (MJ0003)',
+		'Anand Singh (MJ0004)',
+		'Ashutosh Yadav  (MJ0005)',
+		'Gaurav Singh  (MJ0006)',
+		'Madhu (MJ0007)',
+		'Mayank Kumar (MJ0008)',
+		'Piyush jha (MJ0009)',
+		'PRADEEP KUMAR PATEL  (MJ0010)',
+		'Prahalad Kumar  (MJ0011)',
+		'Tanvi  (MJ0012)',],
+           'Chemistry JEE': [
+		'Ashutosh Kumar Saroj  (CJ0001)',
+		'Bhavi Rathod (CJ0002)',
+		'Gaurav Singh (CJ0003)',
+		'Hari Om Nagar (CJ0004)',
+		'Heena Yadav  (CJ0005)',
+		'Kamal Kishore Upadhyay  (CJ0006)',
+		'Pradeep Kumar  (CJ0007)',
+		'Rakhi (CJ0008)',
+		'Rashmi (CJ0009)',
+		'Raveen kumar  (CJ0010)',
+		'Ravi (CJ0011)',
+		'Rishabh singh  (CJ0012)',
+		'Sahil Saini (CJ0013)',
+		'Sovan Sundar Dhauria  (CJ0014)',
+		'Twinkle (CJ0015)',],
+             'Chemistry NEET': [
+		'Ajahar Ansary  (CN0001)',
+		'Akshay Chauhan  (CN0002)',
+		'Devendra Pandey  (CN0003)',
+		'Garima Tomar  (CN0004)',
+		'Kunal verma (CN0005)',
+		'Pragati Shetty  (CN0006)',
+		'Pratiksha Nayak  (CN0007)',
+		'Savi (CN0008)',
+		'SUSHREE SUBHALAXMI SAHOO  (CN0009)',
+		'Yoshina (CN0010)',],
+              'Physics JEE': [
+			'Aditya Rai (PJ0001)',
+			'Amit Anirudha Gupta (PJ0002)',
+			'Anurag Pandya  (PJ0003)',
+			'ATULANAND JEE MAHARAJ  (PJ0004)',
+			'Deepak Burnwal (PJ0005)',
+			'Keshav  Verma (PJ0006)',
+			'Mohd sharique  (PJ0007)',
+			'Navneet Jaiswal  (PJ0008)',
+			'Om Prakash Goswami  (PJ0009)',
+			],
+                'Physics NEET': [
+			'Ajeet Kumar Gupta (PN0001)',
+			'Aman kumar jha (PN0002)',
+			'ATUL KUMAR SHRIVASTAWA (PN0003)',
+			'Ayan Kumar Pal (PN0004)',
+			'Chandrashekhar chourasia  (PN0005)',
+			'NEERAJ SHARMA (PN0006)',
+			'Pratiksha (PN0007)',
+			'PRIYAS (PN0008)',
+			'Ritesh Bhardwaj (PN0009)',
+			'Sameer Jena (PN0010)',
+			'Subhash Dadarwal (PN0011)',
+			'Rahul Patel  (PN0012)',
+	],
+                    'Zoology': ['Anjali Yadav (ZN0001)',
+                        'Ashima (ZN0002)',
+                        'Debasmita Panda (ZN0003)',
+                        'Hanisha sharma (ZN0004)',
+                        'Jaspreet kaur (ZN0005)',
+                        'Neha kaushik (ZN0006)',
+                        'Sanya Arora (ZN0007)',
+                        'Vimlesh Maurya (ZN0008)',
+                        ],
+                    'Botany': [
+                        'Agnideepa Kar (B0001)',
+                        'Akansha Kailashi (B0002)',
+                        'Aradhya Dubey (B0003)',
+                        'Diksha Singh (B0004)',
+                        'Gourav Kumar Ojha (B0005)',
+                        'Gunjan Sharma (B0006)',
+                        'Harekrishna Mandal (B0007)',
+                        'Kunal Khodke (B0008)',
+                        'Nisha Jaryal (B0009)',
+                        'Pooja Garg (B0010)',
+                        'Priyanshi (B0011)',
+                        'Ramesh Kumar Saini (B0012)',
+                        'Renu (B0013)',
+                        'Sandhya Mishra (B0014)',
+                        'Vagish Kumar (B0015)',
+                        'Vikram Singh (B0016)'
+                    ]
+                };
+                const traineeOptions = trainees[subject] || [];
+                let options = '<option value="">Select a Trainee</option>';
+                traineeOptions.forEach(trainee => {
+                    options += `<option value="${trainee}">${trainee}</option>`;
+                });
+                $('#trainee-select').html(options).trigger('change');
+            });
+
+            // Clear button functionality
+            $('#clear-button').click(function() {
+                $('#form')[0].reset();
+                $('.select').val(null).trigger('change');
+            });
+        });
+    </script>
+</body>
+</html>
